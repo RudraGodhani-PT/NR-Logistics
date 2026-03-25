@@ -5,9 +5,20 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand-50: #e8f8f0;
+  --color-brand-100: #c5edd9;
+  --color-brand-200: #8edbb3;
+  --color-brand-300: #57c98d;
+  --color-brand-400: #2abb7f;
+  --color-brand-500: #2ABB7F;
+  --color-brand-600: #22a06e;
+  --color-brand-700: #1a855b;
+  --color-brand-800: #136a48;
+  --color-brand-900: #0c4f36;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -127,4 +138,63 @@
   html {
     @apply font-sans;
   }
+}
+
+@keyframes orb-move-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(70vw, 30vh) scale(1.1); }
+  50%  { transform: translate(50vw, 70vh) scale(0.9); }
+  75%  { transform: translate(5vw, 40vh) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-move-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(-40vw, -50vh) scale(0.95); }
+  50%  { transform: translate(-60vw, -10vh) scale(1.1); }
+  75%  { transform: translate(-20vw, -40vh) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-move-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(30vw, -50vh) scale(1.08); }
+  50%  { transform: translate(-20vw, -70vh) scale(0.92); }
+  75%  { transform: translate(20vw, -20vh) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes ping-slow {
+  0%   { transform: scale(1); opacity: 0.75; }
+  75%, 100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes badge-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes badge-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes badge-ring-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes shimmer-wide {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(2); }
 }
