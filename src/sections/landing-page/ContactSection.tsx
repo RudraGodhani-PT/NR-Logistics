@@ -49,6 +49,7 @@ const ContactSection = () => {
               Contact Us
             </div>
 
+
             <Heading as="h2" size="4xl" weight="bold" color="white">
               Partner With Our New{' '}
               <span className="bg-linear-to-r from-brand-400 to-emerald-400 bg-clip-text text-transparent">
